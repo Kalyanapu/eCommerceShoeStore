@@ -13,7 +13,9 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import ecommerce.model.CartItem;
 import ecommerce.model.Category;
+import ecommerce.model.OrderDetail;
 import ecommerce.model.Product;
 import ecommerce.model.Supplier;
 import ecommerce.model.UserDetail;
@@ -56,6 +58,8 @@ public class DBConfig {
 		localFactory.addAnnotatedClass(Product.class);
 		localFactory.addAnnotatedClass(Supplier.class);
 		localFactory.addAnnotatedClass(UserDetail.class);
+		localFactory.addAnnotatedClass(CartItem.class);
+		localFactory.addAnnotatedClass(OrderDetail.class);
 
 		System.out.println("---------SessionFactory object is created--------------");
 
